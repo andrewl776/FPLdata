@@ -1,0 +1,109 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "FPLdata"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('FPLdata')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("FPLdata")
+> ### * FPLdata
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: FPLdata
+> ### Title: Read in Fantasy Premier League Data
+> ### Aliases: FPLdata
+> 
+> ### ** Examples
+> 
+> {
++ 
++ library(dplyr)
++ 
++ fpl_data <- FPLdata()
++ 
++ head(fpl_data)
++ 
++ fpl_data %>%
++   group_by(web_name) %>%
++   summarise("mean_next_gw_points" = mean(next_gw_points, na.rm = TRUE)) %>%
++   arrange(-mean_next_gw_points)
++ 
++ }
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Rows: 3680 Columns: 70
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr   (6): web_name, first_name, news, photo, second_name, status
+dbl  (56): gameweek, event_points, next_gw_points, total_points, chance_of_p...
+lgl   (6): in_dreamteam, special, squad_number, corners_and_indirect_freekic...
+dttm  (2): news_added, correct_as_of_time
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+# A tibble: 600 x 2
+   web_name         mean_next_gw_points
+   <chr>                          <dbl>
+ 1 Cancelo                          8.4
+ 2 Salah                            7.4
+ 3 Gallagher                        6.8
+ 4 Raphinha                         6.8
+ 5 Sá                               6.6
+ 6 Alexander-Arnold                 6.2
+ 7 Smith Rowe                       6.2
+ 8 Bowen                            5.8
+ 9 Jiménez                          5.8
+10 Pukki                            5.8
+# ... with 590 more rows
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+
+detaching 'package:dplyr'
+
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.84 0.19 1.29 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
