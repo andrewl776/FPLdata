@@ -1,7 +1,7 @@
 Package: FPLdata
 Title: Read in Fantasy Premier League Data
 Version: 0.1.0
-Author: person(given = "Andrew",
+Authors@R: person(given = "Andrew",
            family = "Little",
            role = c("aut", "cre"),
            email = "andrewlittlebristol@gmail.com")
