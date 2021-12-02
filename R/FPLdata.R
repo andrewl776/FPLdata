@@ -20,7 +20,8 @@
 #' @return A dataframe (tibble).
 #' @export
 #'
-#' @examples
+#' @examples \donttest{
+#'
 #' library(dplyr)
 #'
 #' fpl_data <- FPLdata()
@@ -31,6 +32,7 @@
 #'   group_by(web_name) %>%
 #'   summarise("mean_next_gw_points" = mean(next_gw_points, na.rm = TRUE)) %>%
 #'   arrange(-mean_next_gw_points)
+#'}
 #'
 FPLdata <- function() {
   readr::read_csv("https://raw.githubusercontent.com/andrewl776/fplmodels/master/data/players_by_gameweek_csv.csv")

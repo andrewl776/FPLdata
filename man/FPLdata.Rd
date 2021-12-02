@@ -29,6 +29,8 @@ thereby fully automating the decision making process in Fantasy Premier
 League. This function simply supplies the required data for such a task.
 }
 \examples{
+\donttest{
+
 library(dplyr)
 
 fpl_data <- FPLdata()
@@ -39,5 +41,6 @@ fpl_data \%>\%
   group_by(web_name) \%>\%
   summarise("mean_next_gw_points" = mean(next_gw_points, na.rm = TRUE)) \%>\%
   arrange(-mean_next_gw_points)
+}
 
 }
