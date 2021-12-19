@@ -16,7 +16,7 @@ install.packages("FPLdata")
 
 - The package can then be loaded via:
 ```{r, eval=FALSE}
-library(aRbs)
+library(FPLdata)
 ```
 
 - Finally, the latest data can be retrieved by calling the only function in the package:
