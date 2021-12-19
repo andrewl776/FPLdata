@@ -1,7 +1,7 @@
 <!-- badges: start -->
 [![downloads](https://cranlogs.r-pkg.org/badges/FPLdata)](downloads)
 [![CRAN status](https://www.r-pkg.org/badges/version/FPLdata)](https://CRAN.R-project.org/package=FPLdata)
-[![R-CMD-check](https://github.com/andrewl776/FPLdata/actions/workflows/check-release.yaml/badge.svg)](https://github.com/andrewl776/FPLdata)
+[![R-CMD-check](https://github.com/andrewl776/FPLdata/workflows/R-CMD-check/badge.svg)](https://github.com/andrewl776/FPLdata/actions)
 <!-- badges: end -->
 
 # FPLdata
