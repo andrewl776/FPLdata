@@ -8,13 +8,23 @@
 Get weekly-updated player-gameweek level data for Fantasy Premier League football
 
 # Installation
-- `{FPLdata}` can be installed from CRAN by running:
+
+- To install the latest version from GitHub, run:
+
+```{r, eval=FALSE}
+devtools::install_github("andrewl776/FPLdata")
+```
+
+- A near-latest version of `{FPLdata}` can be installed from CRAN by running:
 
 ```{r, eval=FALSE}
 install.packages("FPLdata")
 ```
 
-- The package can then be loaded via:
+# Getting the data
+
+- The package can be loaded via:
+
 ```{r, eval=FALSE}
 library(FPLdata)
 ```
