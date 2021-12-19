@@ -20,7 +20,7 @@ Description: This data contains a large variety of information on players and th
   each gameweek, thereby fully automating the decision making process in
   Fantasy Premier League. This function simply supplies the required data
   for such a task.
-Imports: readr, dplyr
+Imports: readr, dplyr, tidyr
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.2
