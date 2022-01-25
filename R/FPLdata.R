@@ -34,6 +34,7 @@
 #'   arrange(-mean_next_gw_points)
 #'}
 #'
+#'
 FPLdata <- function() {
   readr::read_csv("https://raw.githubusercontent.com/andrewl776/fplmodels/master/data/players_by_gameweek_csv.csv") %>%
     tidyr::drop_na("next_gw_points") %>%
